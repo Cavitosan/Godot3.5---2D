@@ -1,0 +1,287 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://scripts/Cloud.gd" type="Script" id=1]
+[ext_resource path="res://assets/background/cloud.png" type="Texture" id=2]
+[ext_resource path="res://assets/background/sky.png" type="Texture" id=3]
+[ext_resource path="res://assets/background/mountains.png" type="Texture" id=4]
+[ext_resource path="res://assets/background/ground.png" type="Texture" id=5]
+[ext_resource path="res://scripts/Background.gd" type="Script" id=6]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sky:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sky2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Cloud1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cloud2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "amanhecer"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sky:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.14902, 0.133333, 0.192157, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sky2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.14902, 0.133333, 0.192157, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Cloud1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.12549, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cloud2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.12549, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "anoitecer"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sky:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.929412, 0.188235, 0.188235, 1 ), Color( 0.14902, 0.133333, 0.192157, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sky2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.929412, 0.188235, 0.188235, 1 ), Color( 0.14902, 0.133333, 0.192157, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Cloud1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.639216, 0.341176, 0.121569, 1 ), Color( 0.12549, 0.121569, 0.121569, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cloud2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.631373, 0.352941, 0.129412, 1 ), Color( 0.12549, 0.121569, 0.121569, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "tardecer"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sky:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.894118, 0.203922, 0.203922, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sky2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.929412, 0.188235, 0.188235, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Cloud1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.639216, 0.341176, 0.121569, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cloud2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.631373, 0.352941, 0.129412, 1 ) ]
+}
+
+[node name="Background" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="Sky" type="Sprite" parent="."]
+scale = Vector2( 48, 28.8 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Sky2" type="Sprite" parent="."]
+position = Vector2( 0, -283 )
+scale = Vector2( 48, 28.8 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Cloud1" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+script = ExtResource( 1 )
+velocidade = 0.2
+
+[node name="Cloud2" type="Sprite" parent="."]
+position = Vector2( 480, 0 )
+texture = ExtResource( 2 )
+centered = false
+script = ExtResource( 1 )
+velocidade = 0.2
+
+[node name="Montanha1" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+centered = false
+script = ExtResource( 1 )
+velocidade = 0.7
+
+[node name="Montanha2" type="Sprite" parent="."]
+position = Vector2( 480, 0 )
+texture = ExtResource( 4 )
+centered = false
+script = ExtResource( 1 )
+velocidade = 0.7
+
+[node name="Ground1" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+centered = false
+script = ExtResource( 1 )
+velocidade = 5.0
+
+[node name="Ground2" type="Sprite" parent="."]
+position = Vector2( 480, 0 )
+texture = ExtResource( 5 )
+centered = false
+script = ExtResource( 1 )
+velocidade = 5.0
+
+[node name="AnimationPlayer_horario" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/amanhecer = SubResource( 2 )
+anims/anoitecer = SubResource( 3 )
+anims/tardecer = SubResource( 4 )
+
+[node name="Timer_horario_tarde" type="Timer" parent="."]
+wait_time = 25.0
+one_shot = true
+
+[node name="Timer_horario_noite" type="Timer" parent="."]
+wait_time = 25.0
+one_shot = true
+
+[node name="Timer_horario_manha" type="Timer" parent="."]
+wait_time = 25.0
+one_shot = true
+
+[connection signal="timeout" from="Timer_horario_tarde" to="." method="_on_Timer_horario_tarde_timeout"]
+[connection signal="timeout" from="Timer_horario_noite" to="." method="_on_Timer_horario_noite_timeout"]
+[connection signal="timeout" from="Timer_horario_manha" to="." method="_on_Timer_horario_manha_timeout"]

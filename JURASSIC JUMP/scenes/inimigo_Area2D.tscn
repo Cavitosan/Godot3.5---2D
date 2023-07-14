@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/obstacles/long_wood_spike.png" type="Texture" id=1]
+[ext_resource path="res://scripts/inimigo_Area2D.gd" type="Script" id=2]
+[ext_resource path="res://assets/obstacles/small_wood_spike.png" type="Texture" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 60, 177 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 60, 126 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "Log",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 2 ) ],
+"loop": true,
+"name": "Short_logs",
+"speed": 5.0
+} ]
+
+[node name="Loginimigo_Area2D" type="Area2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Log_Sprite1" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 3 )
+animation = "Short_logs"
+
+[node name="Log_CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2( -0.261392, -1.52409 )
+polygon = PoolVector2Array( 0, 16.4032, 19.1284, 6.56129, 15.3027, -15.7471, -19.1284, -15.7471, -19.1284, 7.21742 )
+
+[node name="Short_Log_CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+scale = Vector2( -0.215274, -1.03496 )
+polygon = PoolVector2Array( 0, 17.3919, 23.2262, 3.86487, 18.581, -16.4257, -23.2262, -16.4257, -23.2262, 3.86487 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_Loginimigo_Area2D_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
