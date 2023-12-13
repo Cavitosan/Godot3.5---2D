@@ -1,0 +1,70 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://assets/Player/Jump1.png" type="Texture" id=2]
+[ext_resource path="res://assets/Player/Run3.png" type="Texture" id=3]
+[ext_resource path="res://assets/Player/Jump4.png" type="Texture" id=4]
+[ext_resource path="res://assets/Player/Run1.png" type="Texture" id=5]
+[ext_resource path="res://assets/Player/Run7.png" type="Texture" id=6]
+[ext_resource path="res://assets/Player/Jump3.png" type="Texture" id=7]
+[ext_resource path="res://assets/Player/Idle0.png" type="Texture" id=8]
+[ext_resource path="res://assets/Player/Jump0.png" type="Texture" id=9]
+[ext_resource path="res://assets/Player/Run0.png" type="Texture" id=10]
+[ext_resource path="res://assets/Player/Run2.png" type="Texture" id=11]
+[ext_resource path="res://assets/Player/Run4.png" type="Texture" id=12]
+[ext_resource path="res://assets/Sky.png" type="Texture" id=13]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "Fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 3 ), ExtResource( 12 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Run",
+"speed": 8.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 15.0
+height = 26.0
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 2, 5 )
+shape = SubResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 1.2, 1.2 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.1, 0.1 )
+motion_mirroring = Vector2( 640, 640 )
+
+[node name="Sky" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 13 )
+centered = false
